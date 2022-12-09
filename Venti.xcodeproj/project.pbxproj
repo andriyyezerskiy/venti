@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00050C12938A288009BA728 /* ItemTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00050C02938A288009BA728 /* ItemTypeSelectionView.swift */; };
+		A00050C32938A701009BA728 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00050C22938A701009BA728 /* ItemType.swift */; };
+		A00050C52938AB92009BA728 /* Int64+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00050C42938AB92009BA728 /* Int64+Extensions.swift */; };
+		A00050C72938AB9B009BA728 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00050C62938AB9B009BA728 /* Int+Extensions.swift */; };
+		A0841B852909900800492C26 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0841B842909900800492C26 /* AddItemViewModel.swift */; };
+		A09561072942378200C29CF1 /* RomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09561062942378200C29CF1 /* RomeItemView.swift */; };
+		A095610A2942395700C29CF1 /* SizeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09561092942395700C29CF1 /* SizeType.swift */; };
+		A0A7ABE228BA094100898F2D /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7ABE128BA094100898F2D /* Color+Extensions.swift */; };
+		A0B3A12228B0CF3D008E896C /* VentiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A12128B0CF3D008E896C /* VentiApp.swift */; };
+		A0B3A12628B0CF3E008E896C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3A12528B0CF3E008E896C /* Assets.xcassets */; };
+		A0B3A12928B0CF3E008E896C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3A12828B0CF3E008E896C /* Preview Assets.xcassets */; };
+		A0B3A12B28B0CF3E008E896C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A12A28B0CF3E008E896C /* Persistence.swift */; };
+		A0B3A12E28B0CF3E008E896C /* Venti.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A12C28B0CF3E008E896C /* Venti.xcdatamodeld */; };
+		A0B3A13528B0D00C008E896C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A13428B0D00C008E896C /* HomeView.swift */; };
+		A0B3A13728B0D28E008E896C /* ReordableForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A13628B0D28E008E896C /* ReordableForEach.swift */; };
+		A0B3A13928B0D439008E896C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A13828B0D439008E896C /* Item.swift */; };
+		A0B3A13E28B0E952008E896C /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A13D28B0E952008E896C /* ItemViewModel.swift */; };
+		A0B3A14028B0E9B3008E896C /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A13F28B0E9B3008E896C /* DateFormatter+Extensions.swift */; };
+		A0BB7CCB28B10965004FA973 /* ItemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB7CCA28B10965004FA973 /* ItemStorage.swift */; };
+		A0BB7CCE28B10AD4004FA973 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB7CCD28B10AD4004FA973 /* HomeViewModel.swift */; };
+		A0BB7CD328B12797004FA973 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB7CD228B12797004FA973 /* AddItemView.swift */; };
+		A0F77E162933BB00001E9495 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F77E152933BB00001E9495 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00050C02938A288009BA728 /* ItemTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTypeSelectionView.swift; sourceTree = "<group>"; };
+		A00050C22938A701009BA728 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		A00050C42938AB92009BA728 /* Int64+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int64+Extensions.swift"; sourceTree = "<group>"; };
+		A00050C62938AB9B009BA728 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		A0841B842909900800492C26 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		A09561062942378200C29CF1 /* RomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeItemView.swift; sourceTree = "<group>"; };
+		A09561092942395700C29CF1 /* SizeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeType.swift; sourceTree = "<group>"; };
+		A0A7ABE128BA094100898F2D /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		A0B3A11E28B0CF3D008E896C /* Venti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B3A12128B0CF3D008E896C /* VentiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentiApp.swift; sourceTree = "<group>"; };
+		A0B3A12528B0CF3E008E896C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0B3A12828B0CF3E008E896C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0B3A12A28B0CF3E008E896C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A0B3A12D28B0CF3E008E896C /* Dayto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dayto.xcdatamodel; sourceTree = "<group>"; };
+		A0B3A13428B0D00C008E896C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A0B3A13628B0D28E008E896C /* ReordableForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReordableForEach.swift; sourceTree = "<group>"; };
+		A0B3A13828B0D439008E896C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A0B3A13D28B0E952008E896C /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		A0B3A13F28B0E9B3008E896C /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		A0BB7CCA28B10965004FA973 /* ItemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStorage.swift; sourceTree = "<group>"; };
+		A0BB7CCD28B10AD4004FA973 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A0BB7CD228B12797004FA973 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		A0F77E152933BB00001E9495 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0B3A11B28B0CF3D008E896C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00050BF2938A24D009BA728 /* ItemType */ = {
+			isa = PBXGroup;
+			children = (
+				A00050C02938A288009BA728 /* ItemTypeSelectionView.swift */,
+			);
+			path = ItemType;
+			sourceTree = "<group>";
+		};
+		A09561082942393B00C29CF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A09561092942395700C29CF1 /* SizeType.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0B3A11528B0CF3D008E896C = {
+			isa = PBXGroup;
+			children = (
+				A0B3A12028B0CF3D008E896C /* Venti */,
+				A0B3A11F28B0CF3D008E896C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0B3A11F28B0CF3D008E896C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A11E28B0CF3D008E896C /* Venti.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0B3A12028B0CF3D008E896C /* Venti */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A12128B0CF3D008E896C /* VentiApp.swift */,
+				A0BB7CC928B10948004FA973 /* CoreData */,
+				A0BB7CCC28B10AC9004FA973 /* Home */,
+				A0F77E142933BAF3001E9495 /* Settings */,
+				A00050BF2938A24D009BA728 /* ItemType */,
+				A0B3A13C28B0E937008E896C /* Items */,
+				A0BB7CD128B1277A004FA973 /* AddItem */,
+				A0BB7CCF28B10BD2004FA973 /* Models */,
+				A0BB7CD028B10BDE004FA973 /* Supporting VIews */,
+				A09561082942393B00C29CF1 /* Supporting Files */,
+				A0B3A14128B0E9B9008E896C /* Extensions */,
+				A0B3A12528B0CF3E008E896C /* Assets.xcassets */,
+				A0B3A12728B0CF3E008E896C /* Preview Content */,
+			);
+			path = Venti;
+			sourceTree = "<group>";
+		};
+		A0B3A12728B0CF3E008E896C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A12828B0CF3E008E896C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0B3A13C28B0E937008E896C /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A13D28B0E952008E896C /* ItemViewModel.swift */,
+				A09561062942378200C29CF1 /* RomeItemView.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		A0B3A14128B0E9B9008E896C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A13F28B0E9B3008E896C /* DateFormatter+Extensions.swift */,
+				A0A7ABE128BA094100898F2D /* Color+Extensions.swift */,
+				A00050C42938AB92009BA728 /* Int64+Extensions.swift */,
+				A00050C62938AB9B009BA728 /* Int+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0BB7CC928B10948004FA973 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A12C28B0CF3E008E896C /* Venti.xcdatamodeld */,
+				A0B3A12A28B0CF3E008E896C /* Persistence.swift */,
+				A0BB7CCA28B10965004FA973 /* ItemStorage.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A0BB7CCC28B10AC9004FA973 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A13428B0D00C008E896C /* HomeView.swift */,
+				A0BB7CCD28B10AD4004FA973 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A0BB7CCF28B10BD2004FA973 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A13828B0D439008E896C /* Item.swift */,
+				A00050C22938A701009BA728 /* ItemType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0BB7CD028B10BDE004FA973 /* Supporting VIews */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A13628B0D28E008E896C /* ReordableForEach.swift */,
+			);
+			path = "Supporting VIews";
+			sourceTree = "<group>";
+		};
+		A0BB7CD128B1277A004FA973 /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				A0BB7CD228B12797004FA973 /* AddItemView.swift */,
+				A0841B842909900800492C26 /* AddItemViewModel.swift */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
+		A0F77E142933BAF3001E9495 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A0F77E152933BB00001E9495 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0B3A11D28B0CF3D008E896C /* Venti */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0B3A13128B0CF3E008E896C /* Build configuration list for PBXNativeTarget "Venti" */;
+			buildPhases = (
+				A0B3A11A28B0CF3D008E896C /* Sources */,
+				A0B3A11B28B0CF3D008E896C /* Frameworks */,
+				A0B3A11C28B0CF3D008E896C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Venti;
+			productName = Dayto;
+			productReference = A0B3A11E28B0CF3D008E896C /* Venti.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0B3A11628B0CF3D008E896C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					A0B3A11D28B0CF3D008E896C = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A0B3A11928B0CF3D008E896C /* Build configuration list for PBXProject "Venti" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0B3A11528B0CF3D008E896C;
+			productRefGroup = A0B3A11F28B0CF3D008E896C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0B3A11D28B0CF3D008E896C /* Venti */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0B3A11C28B0CF3D008E896C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B3A12928B0CF3E008E896C /* Preview Assets.xcassets in Resources */,
+				A0B3A12628B0CF3E008E896C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0B3A11A28B0CF3D008E896C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09561072942378200C29CF1 /* RomeItemView.swift in Sources */,
+				A0F77E162933BB00001E9495 /* SettingsView.swift in Sources */,
+				A00050C72938AB9B009BA728 /* Int+Extensions.swift in Sources */,
+				A0B3A14028B0E9B3008E896C /* DateFormatter+Extensions.swift in Sources */,
+				A0B3A13928B0D439008E896C /* Item.swift in Sources */,
+				A0B3A12B28B0CF3E008E896C /* Persistence.swift in Sources */,
+				A00050C52938AB92009BA728 /* Int64+Extensions.swift in Sources */,
+				A0A7ABE228BA094100898F2D /* Color+Extensions.swift in Sources */,
+				A0B3A13E28B0E952008E896C /* ItemViewModel.swift in Sources */,
+				A0BB7CCB28B10965004FA973 /* ItemStorage.swift in Sources */,
+				A00050C12938A288009BA728 /* ItemTypeSelectionView.swift in Sources */,
+				A0B3A13728B0D28E008E896C /* ReordableForEach.swift in Sources */,
+				A095610A2942395700C29CF1 /* SizeType.swift in Sources */,
+				A0BB7CD328B12797004FA973 /* AddItemView.swift in Sources */,
+				A0BB7CCE28B10AD4004FA973 /* HomeViewModel.swift in Sources */,
+				A0B3A12228B0CF3D008E896C /* VentiApp.swift in Sources */,
+				A0841B852909900800492C26 /* AddItemViewModel.swift in Sources */,
+				A0B3A13528B0D00C008E896C /* HomeView.swift in Sources */,
+				A0B3A12E28B0CF3E008E896C /* Venti.xcdatamodeld in Sources */,
+				A00050C32938A701009BA728 /* ItemType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A0B3A12F28B0CF3E008E896C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0B3A13028B0CF3E008E896C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0B3A13228B0CF3E008E896C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Venti/Preview Content\"";
+				DEVELOPMENT_TEAM = 4K2L2D8575;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Venti;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andriyyezerskiy.ventiapp.venti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0B3A13328B0CF3E008E896C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Venti/Preview Content\"";
+				DEVELOPMENT_TEAM = 4K2L2D8575;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Venti;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andriyyezerskiy.ventiapp.venti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0B3A11928B0CF3D008E896C /* Build configuration list for PBXProject "Venti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0B3A12F28B0CF3E008E896C /* Debug */,
+				A0B3A13028B0CF3E008E896C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0B3A13128B0CF3E008E896C /* Build configuration list for PBXNativeTarget "Venti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0B3A13228B0CF3E008E896C /* Debug */,
+				A0B3A13328B0CF3E008E896C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A0B3A12C28B0CF3E008E896C /* Venti.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A0B3A12D28B0CF3E008E896C /* Dayto.xcdatamodel */,
+			);
+			currentVersion = A0B3A12D28B0CF3E008E896C /* Dayto.xcdatamodel */;
+			path = Venti.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A0B3A11628B0CF3D008E896C /* Project object */;
+}
