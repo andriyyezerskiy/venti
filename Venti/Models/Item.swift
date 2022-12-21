@@ -50,4 +50,15 @@ extension Item {
 		.init(id: .init(), type: .rome, title: "Vacation", observedDate: Date.init(timeIntervalSinceNow: TimeInterval(123300)), textColor: .white, backgroundColor: .blue),
 		.init(id: .init(), type: .rome, title: "Gifts", observedDate: Date.init(timeIntervalSinceNow: TimeInterval(23123200)), textColor: .white, backgroundColor: .yellow),
 	]
+	
+	static func generateRandomPreview(with type: ItemType) -> Item {
+		.init(
+			id: UUID(),
+			type: type,
+			title: ItemPreview.titles.randomElement() ?? "",
+			observedDate: Date(timeIntervalSinceNow: .random(in: -10000000000...1000000000)),
+			textColor: .white,
+			backgroundColor: .red
+		)
+	}
 }
