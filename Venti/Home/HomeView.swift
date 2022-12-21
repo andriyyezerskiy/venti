@@ -22,7 +22,7 @@ struct HomeView: View {
 						LazyVGrid(columns: columns, spacing: 20) {
 							ReorderableForEach(items: viewModel.items) { item in
 								let viewModel = ItemViewModel(item: item)
-								RomeItemView(viewModel: viewModel, sizeType: .small)
+								ItemView(viewModel: viewModel)
 							} moveAction: { from, to in
 								viewModel.items.move(fromOffsets: from, toOffset: to)
 							}

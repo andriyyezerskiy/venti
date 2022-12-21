@@ -44,6 +44,7 @@ final class ItemStorage: ObservableObject {
 		let persistentItem = PersistentItem(context: persistence.persistentContainer.viewContext)
 		persistentItem.id = UUID()
 		persistentItem.title = item.title
+		persistentItem.type = item.type.rawValue.asInt64
 		persistentItem.createdDate = .now
 		persistentItem.observedDate = item.observedDate
 		persistentItem.textColorHex = item.textColor.toHex()
