@@ -60,7 +60,7 @@
 		A09561062942378200C29CF1 /* RomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeItemView.swift; sourceTree = "<group>"; };
 		A09561092942395700C29CF1 /* SizeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeType.swift; sourceTree = "<group>"; };
 		A0A7ABE128BA094100898F2D /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		A0AF17DD2959F1BD003FD4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0AF17DD2959F1BD003FD4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0B3A11E28B0CF3D008E896C /* Venti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B3A12128B0CF3D008E896C /* VentiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentiApp.swift; sourceTree = "<group>"; };
 		A0B3A12528B0CF3E008E896C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,8 +129,32 @@
 			children = (
 				A09561092942395700C29CF1 /* SizeType.swift */,
 				A06DC36D2947CDA200772D1B /* Container+Style.swift */,
+				A0B3A14128B0E9B9008E896C /* Extensions */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0AF17DE2959F2CC003FD4CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0AF17DD2959F1BD003FD4CA /* Info.plist */,
+				A0B3A12528B0CF3E008E896C /* Assets.xcassets */,
+				A0B3A12728B0CF3E008E896C /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0AF17DF2959F330003FD4CA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3A12128B0CF3D008E896C /* VentiApp.swift */,
+				A05D1A8B2954BBF40014C19C /* AppDelegate.swift */,
+				A0BB7CCC28B10AC9004FA973 /* Home */,
+				A0F77E142933BAF3001E9495 /* Settings */,
+				A0BB7CD128B1277A004FA973 /* AddItem */,
+				A0B3A13C28B0E937008E896C /* Items */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		A0B3A11528B0CF3D008E896C = {
@@ -152,21 +176,13 @@
 		A0B3A12028B0CF3D008E896C /* Venti */ = {
 			isa = PBXGroup;
 			children = (
-				A0AF17DD2959F1BD003FD4CA /* Info.plist */,
-				A0B3A12128B0CF3D008E896C /* VentiApp.swift */,
-				A05D1A8B2954BBF40014C19C /* AppDelegate.swift */,
+				A0AF17DF2959F330003FD4CA /* Main */,
 				A05D1A842953AF750014C19C /* Notifications */,
 				A0BB7CC928B10948004FA973 /* CoreData */,
-				A0BB7CCC28B10AC9004FA973 /* Home */,
-				A0F77E142933BAF3001E9495 /* Settings */,
-				A0B3A13C28B0E937008E896C /* Items */,
-				A0BB7CD128B1277A004FA973 /* AddItem */,
 				A0BB7CCF28B10BD2004FA973 /* Models */,
 				A0BB7CD028B10BDE004FA973 /* Supporting VIews */,
 				A09561082942393B00C29CF1 /* Supporting Files */,
-				A0B3A14128B0E9B9008E896C /* Extensions */,
-				A0B3A12528B0CF3E008E896C /* Assets.xcassets */,
-				A0B3A12728B0CF3E008E896C /* Preview Content */,
+				A0AF17DE2959F2CC003FD4CA /* Resources */,
 			);
 			path = Venti;
 			sourceTree = "<group>";
@@ -484,11 +500,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Venti/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Venti/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4K2L2D8575;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Venti/Info.plist;
+				INFOPLIST_FILE = Venti/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Venti;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -515,11 +531,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Venti/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Venti/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4K2L2D8575;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Venti/Info.plist;
+				INFOPLIST_FILE = Venti/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Venti;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
