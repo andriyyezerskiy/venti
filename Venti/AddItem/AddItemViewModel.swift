@@ -29,7 +29,11 @@ class AddItemViewModel: ObservableObject {
 	}
 	
 	// MARK: - Helpers
-	func save() {
-		itemStorage.add(item: item)
+	func save() async {
+		if isNotificationEnabled {
+			await LocalNotifications.shared.scheduleNotification(for: item)
+		}
+		
+		await itemStorage.add(item: item)
 	}
 }

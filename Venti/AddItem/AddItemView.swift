@@ -26,8 +26,10 @@ struct AddItemView: View {
 		.toolbar {
 			ToolbarItem {
 				Button {
-					viewModel.save()
-					dismiss()
+					Task {
+						await viewModel.save()
+						dismiss()
+					}
 				} label: {
 					Text("Save")
 				}

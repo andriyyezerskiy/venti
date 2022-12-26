@@ -8,6 +8,7 @@
 import CoreData
 import SwiftUI
 
+@MainActor
 final class ItemStorage: ObservableObject {
 	
 	// MARK: - Shared
@@ -26,11 +27,13 @@ final class ItemStorage: ObservableObject {
 			self.persistence = Persistence.shared
 		}
 		
-		fetch()
+		Task {
+			await fetch()
+		}
 	}
 	
 	// MARK: - Operations
-	func fetch() {
+	func fetch() async {
 		let request = NSFetchRequest<PersistentItem>(entityName: "PersistentItem")
 		
 		do {
@@ -40,7 +43,7 @@ final class ItemStorage: ObservableObject {
 		}
 	}
 	
-	func add(item: Item) {
+	func add(item: Item) async {
 		let persistentItem = PersistentItem(context: persistence.persistentContainer.viewContext)
 		persistentItem.id = UUID()
 		persistentItem.title = item.title
@@ -50,17 +53,17 @@ final class ItemStorage: ObservableObject {
 		persistentItem.textColorHex = item.textColor.toHex()
 		persistentItem.backgroundColorHex = item.backgroundColor.toHex()
 		
-		syncChanges()
+		await syncChanges()
 	}
 	
-	func delete(with id: UUID) {
+	func delete(with id: UUID) async {
 //		persistence.persistentContainer.viewContext.delete(persistentHydrationItem)
-		syncChanges()
+		await syncChanges()
 	}
 	
 	// MARK: - Helpers
-	private func syncChanges() {
+	private func syncChanges() async {
 		persistence.saveContext()
-		fetch()
+		await fetch()
 	}
 }

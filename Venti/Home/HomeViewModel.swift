@@ -6,7 +6,9 @@
 //
 
 import Combine
+import SwiftUI
 
+@MainActor
 class HomeViewModel: ObservableObject {
 	
 	// MARK: - Properties
@@ -15,8 +17,10 @@ class HomeViewModel: ObservableObject {
 	
 	@Published var persistentItems: [PersistentItem] = [] {
 		didSet {
-			items = persistentItems
-				.compactMap { Item(persistentItem: $0) }
+			Task { @MainActor in
+				items = persistentItems
+					.compactMap { Item(persistentItem: $0) }
+			}
 		}
 	}
 	
@@ -33,6 +37,7 @@ class HomeViewModel: ObservableObject {
 	// MARK: - Subscribers
 	func subscribeToItemStorage() {
 		itemStorage.$persistentItems
+			.receive(on: DispatchQueue.main)
 			.sink(receiveValue: { [weak self] persistentItem in
 				guard let self = self else { return }
 				self.persistentItems = persistentItem

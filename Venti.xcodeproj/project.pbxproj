@@ -14,6 +14,8 @@
 		A01FF56C2950CC9A0096DC2B /* ItemPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01FF56B2950CC9A0096DC2B /* ItemPreview.swift */; };
 		A05D1A812953818B0014C19C /* ItemTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D1A802953818B0014C19C /* ItemTypeView.swift */; };
 		A05D1A83295382DC0014C19C /* SelectionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D1A82295382DC0014C19C /* SelectionIndicatorView.swift */; };
+		A05D1A892953AFC30014C19C /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D1A882953AFC30014C19C /* LocalNotifications.swift */; };
+		A05D1A8C2954BBF40014C19C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D1A8B2954BBF40014C19C /* AppDelegate.swift */; };
 		A06DC36B2947CCF000772D1B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DC36A2947CCF000772D1B /* View+Extensions.swift */; };
 		A06DC36E2947CDA200772D1B /* Container+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DC36D2947CDA200772D1B /* Container+Style.swift */; };
 		A07FE4DA2943A77600812CFC /* ItemTypeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FE4D92943A77600812CFC /* ItemTypeSelectionViewModel.swift */; };
@@ -47,6 +49,8 @@
 		A01FF56B2950CC9A0096DC2B /* ItemPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreview.swift; sourceTree = "<group>"; };
 		A05D1A802953818B0014C19C /* ItemTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTypeView.swift; sourceTree = "<group>"; };
 		A05D1A82295382DC0014C19C /* SelectionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionIndicatorView.swift; sourceTree = "<group>"; };
+		A05D1A882953AFC30014C19C /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		A05D1A8B2954BBF40014C19C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A06DC36A2947CCF000772D1B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		A06DC36D2947CDA200772D1B /* Container+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Style.swift"; sourceTree = "<group>"; };
 		A07FE4D92943A77600812CFC /* ItemTypeSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTypeSelectionViewModel.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		A09561062942378200C29CF1 /* RomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeItemView.swift; sourceTree = "<group>"; };
 		A09561092942395700C29CF1 /* SizeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeType.swift; sourceTree = "<group>"; };
 		A0A7ABE128BA094100898F2D /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		A0AF17DD2959F1BD003FD4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A0B3A11E28B0CF3D008E896C /* Venti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B3A12128B0CF3D008E896C /* VentiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentiApp.swift; sourceTree = "<group>"; };
 		A0B3A12528B0CF3E008E896C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +107,14 @@
 			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
+		A05D1A842953AF750014C19C /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				A05D1A882953AFC30014C19C /* LocalNotifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		A07FE4DF2943AD4B00812CFC /* TypeViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +152,10 @@
 		A0B3A12028B0CF3D008E896C /* Venti */ = {
 			isa = PBXGroup;
 			children = (
+				A0AF17DD2959F1BD003FD4CA /* Info.plist */,
 				A0B3A12128B0CF3D008E896C /* VentiApp.swift */,
+				A05D1A8B2954BBF40014C19C /* AppDelegate.swift */,
+				A05D1A842953AF750014C19C /* Notifications */,
 				A0BB7CC928B10948004FA973 /* CoreData */,
 				A0BB7CCC28B10AC9004FA973 /* Home */,
 				A0F77E142933BAF3001E9495 /* Settings */,
@@ -319,6 +335,7 @@
 				A07FE4E12943AD6100812CFC /* ItemView.swift in Sources */,
 				A0B3A12B28B0CF3E008E896C /* Persistence.swift in Sources */,
 				A00050C52938AB92009BA728 /* Int64+Extensions.swift in Sources */,
+				A05D1A892953AFC30014C19C /* LocalNotifications.swift in Sources */,
 				A0A7ABE228BA094100898F2D /* Color+Extensions.swift in Sources */,
 				A0B3A13E28B0E952008E896C /* ItemViewModel.swift in Sources */,
 				A0BB7CCB28B10965004FA973 /* ItemStorage.swift in Sources */,
@@ -328,6 +345,7 @@
 				A0BB7CD328B12797004FA973 /* AddItemView.swift in Sources */,
 				A0BB7CCE28B10AD4004FA973 /* HomeViewModel.swift in Sources */,
 				A07FE4E32943AF3000812CFC /* CopenhagenItemView.swift in Sources */,
+				A05D1A8C2954BBF40014C19C /* AppDelegate.swift in Sources */,
 				A0B3A12228B0CF3D008E896C /* VentiApp.swift in Sources */,
 				A0841B852909900800492C26 /* AddItemViewModel.swift in Sources */,
 				A0B3A13528B0D00C008E896C /* HomeView.swift in Sources */,
@@ -470,8 +488,8 @@
 				DEVELOPMENT_TEAM = 4K2L2D8575;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Venti/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Venti;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -501,8 +519,8 @@
 				DEVELOPMENT_TEAM = 4K2L2D8575;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Venti/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Venti;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
