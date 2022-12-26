@@ -21,7 +21,7 @@ class AddItemViewModel: ObservableObject {
 	
 	// MARK: - Computed Properties
 	var item: Item {
-		Item(id: UUID(), type: type, title: title, observedDate: date, textColor: textColor, backgroundColor: backgroundColor)
+		Item(id: UUID(), type: type, title: title, observedDate: date, textColor: textColor, backgroundColor: backgroundColor, isNotificationEnabled: isNotificationEnabled)
 	}
 	
 	var itemViewModel: ItemViewModel {

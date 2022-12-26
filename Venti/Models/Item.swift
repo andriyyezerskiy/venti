@@ -17,9 +17,10 @@ struct Item: Identifiable, Equatable {
 	let textColor: Color
 	let backgroundColor: Color
 	let imageData: Data?
+	let isNotificationEnabled: Bool
 	
 	// MARK: - Init
-	init(id: UUID, type: ItemType, title: String, observedDate: Date, textColor: Color, backgroundColor: Color, imageData: Data? = nil) {
+	init(id: UUID, type: ItemType, title: String, observedDate: Date, textColor: Color, backgroundColor: Color, imageData: Data? = nil, isNotificationEnabled: Bool = false) {
 		self.id = id
 		self.type = type
 		self.title = title
@@ -27,6 +28,7 @@ struct Item: Identifiable, Equatable {
 		self.textColor = textColor
 		self.backgroundColor = backgroundColor
 		self.imageData = imageData
+		self.isNotificationEnabled = isNotificationEnabled
 	}
 	
 	init?(persistentItem: PersistentItem) {
@@ -38,6 +40,7 @@ struct Item: Identifiable, Equatable {
 		self.textColor = textColor
 		self.backgroundColor = backgroundColor
 		self.imageData = persistentItem.imageData
+		self.isNotificationEnabled = persistentItem.isNotificationEnabled
 	}
 }
 

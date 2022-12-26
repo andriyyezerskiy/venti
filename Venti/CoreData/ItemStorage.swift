@@ -52,6 +52,7 @@ final class ItemStorage: ObservableObject {
 		persistentItem.observedDate = item.observedDate
 		persistentItem.textColorHex = item.textColor.toHex()
 		persistentItem.backgroundColorHex = item.backgroundColor.toHex()
+		persistentItem.isNotificationEnabled = item.isNotificationEnabled
 		
 		await syncChanges()
 	}
