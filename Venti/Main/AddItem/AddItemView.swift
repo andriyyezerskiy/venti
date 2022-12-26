@@ -44,7 +44,7 @@ struct AddItemView: View {
 				.fontWeight(.semibold)
 				.padding(.leading)
 			
-			VStack(spacing: 12){
+			VStack(spacing: 12) {
 				TextField("Event title", text: $viewModel.title)
 					.textFieldStyle(.plain)
 					.padding(.vertical, 6)

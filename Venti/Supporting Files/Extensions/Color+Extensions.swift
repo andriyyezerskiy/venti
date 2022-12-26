@@ -10,6 +10,10 @@ import SwiftUI
 extension Color {
 	static let tertiarySystemFill: Color = Color(uiColor: .tertiarySystemFill)
 	static let quaternarySystemFill: Color = Color(uiColor: .quaternarySystemFill)
+	
+	static let systemGreen: Color = Color(uiColor: .systemGreen)
+	static let systemOrange: Color = Color(uiColor: .systemOrange)
+	static let systemRed: Color = Color(uiColor: .systemRed)
 }
 
 extension Color {

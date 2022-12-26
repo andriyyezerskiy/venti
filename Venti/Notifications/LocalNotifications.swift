@@ -10,6 +10,10 @@ import UserNotifications
 
 class LocalNotifications: NSObject, ObservableObject {
 	
+	@Published private(set) var authorizationStatus: UNAuthorizationStatus?
+	
+	let notificationCenter = UNUserNotificationCenter.current()
+	
 	// MARK: - Init
 	override init() {
 		super.init()
@@ -22,7 +26,6 @@ class LocalNotifications: NSObject, ObservableObject {
 	
 	// MARK: - Helpers
 	func requestAuthorizationForNotifications() async throws -> Bool {
-		let notificationCenter = UNUserNotificationCenter.current()
 		let authorizationOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
 		
 		do {
@@ -31,6 +34,10 @@ class LocalNotifications: NSObject, ObservableObject {
 		} catch {
 			throw error
 		}
+	}
+	
+	func notificationsAuthorizationStatus() async -> UNAuthorizationStatus {
+		await notificationCenter.notificationSettings().authorizationStatus
 	}
 	
 	func scheduleNotification(for: Item? = nil) async {
@@ -50,7 +57,7 @@ class LocalNotifications: NSObject, ObservableObject {
 				let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 				
 				// add our notification request
-				try await UNUserNotificationCenter.current().add(request)
+				try await notificationCenter.add(request)
 			} else {
 				print("Missing authorization")
 			}

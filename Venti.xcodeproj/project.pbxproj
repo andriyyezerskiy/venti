@@ -25,6 +25,8 @@
 		A09561072942378200C29CF1 /* RomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09561062942378200C29CF1 /* RomeItemView.swift */; };
 		A095610A2942395700C29CF1 /* SizeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09561092942395700C29CF1 /* SizeType.swift */; };
 		A0A7ABE228BA094100898F2D /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7ABE128BA094100898F2D /* Color+Extensions.swift */; };
+		A0AF17E1295A0C25003FD4CA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AF17E0295A0C25003FD4CA /* SettingsViewModel.swift */; };
+		A0AF17E5295A0EB1003FD4CA /* UNAuthorizationStatus+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AF17E4295A0EB1003FD4CA /* UNAuthorizationStatus+Extensions.swift */; };
 		A0B3A12228B0CF3D008E896C /* VentiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3A12128B0CF3D008E896C /* VentiApp.swift */; };
 		A0B3A12628B0CF3E008E896C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3A12528B0CF3E008E896C /* Assets.xcassets */; };
 		A0B3A12928B0CF3E008E896C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3A12828B0CF3E008E896C /* Preview Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		A09561092942395700C29CF1 /* SizeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeType.swift; sourceTree = "<group>"; };
 		A0A7ABE128BA094100898F2D /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		A0AF17DD2959F1BD003FD4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0AF17E0295A0C25003FD4CA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A0AF17E4295A0EB1003FD4CA /* UNAuthorizationStatus+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNAuthorizationStatus+Extensions.swift"; sourceTree = "<group>"; };
 		A0B3A11E28B0CF3D008E896C /* Venti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B3A12128B0CF3D008E896C /* VentiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentiApp.swift; sourceTree = "<group>"; };
 		A0B3A12528B0CF3E008E896C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				A00050C42938AB92009BA728 /* Int64+Extensions.swift */,
 				A00050C62938AB9B009BA728 /* Int+Extensions.swift */,
 				A06DC36A2947CCF000772D1B /* View+Extensions.swift */,
+				A0AF17E4295A0EB1003FD4CA /* UNAuthorizationStatus+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				A0F77E152933BB00001E9495 /* SettingsView.swift */,
+				A0AF17E0295A0C25003FD4CA /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -361,7 +367,9 @@
 				A0BB7CD328B12797004FA973 /* AddItemView.swift in Sources */,
 				A0BB7CCE28B10AD4004FA973 /* HomeViewModel.swift in Sources */,
 				A07FE4E32943AF3000812CFC /* CopenhagenItemView.swift in Sources */,
+				A0AF17E1295A0C25003FD4CA /* SettingsViewModel.swift in Sources */,
 				A05D1A8C2954BBF40014C19C /* AppDelegate.swift in Sources */,
+				A0AF17E5295A0EB1003FD4CA /* UNAuthorizationStatus+Extensions.swift in Sources */,
 				A0B3A12228B0CF3D008E896C /* VentiApp.swift in Sources */,
 				A0841B852909900800492C26 /* AddItemViewModel.swift in Sources */,
 				A0B3A13528B0D00C008E896C /* HomeView.swift in Sources */,
