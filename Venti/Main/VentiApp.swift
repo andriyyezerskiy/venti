@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct VentiApp: App {
+	
+	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+	@StateObject var localNotifications: LocalNotifications = .shared
+	
     var body: some Scene {
         WindowGroup {
 			HomeView()

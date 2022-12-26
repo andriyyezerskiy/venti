@@ -21,7 +21,7 @@ class AddItemViewModel: ObservableObject {
 	
 	// MARK: - Computed Properties
 	var item: Item {
-		Item(id: UUID(), type: type, title: title, observedDate: date, textColor: textColor, backgroundColor: backgroundColor)
+		Item(id: UUID(), type: type, title: title, observedDate: date, textColor: textColor, backgroundColor: backgroundColor, isNotificationEnabled: isNotificationEnabled)
 	}
 	
 	var itemViewModel: ItemViewModel {
@@ -29,7 +29,11 @@ class AddItemViewModel: ObservableObject {
 	}
 	
 	// MARK: - Helpers
-	func save() {
-		itemStorage.add(item: item)
+	func save() async {
+		if isNotificationEnabled {
+			await LocalNotifications.shared.scheduleNotification(for: item)
+		}
+		
+		await itemStorage.add(item: item)
 	}
 }

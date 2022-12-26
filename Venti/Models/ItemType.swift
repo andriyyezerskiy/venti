@@ -30,4 +30,8 @@ enum ItemType: Int, Identifiable, CaseIterable {
 			return true
 		}
 	}
+	
+	var selectionPreview: ItemViewModel {
+		ItemViewModel(item: .generateRandomPreview(with: self))
+	}
 }

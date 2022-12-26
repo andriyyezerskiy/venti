@@ -11,33 +11,14 @@ struct AddItemView: View {
 	@Environment(\.dismiss) var dismiss
 	
 	@StateObject var viewModel: AddItemViewModel = .init()
-	static let minimumHeight: CGFloat = 100
-	@State var previewHeight: CGFloat = minimumHeight
 	
-    var body: some View {
-		ZStack(alignment: .bottom) {
-			ScrollView(.vertical) {
-				eventSection
-				
-				stylingSection
-				
-				notificationsSection
-			}
+	var body: some View {
+		ScrollView(.vertical) {
+			eventSection
 			
-			ZStack(alignment: .top) {
-				Color.red
-				
-				VStack {
-					RoundedRectangle(cornerRadius: 6)
-						.fill(.ultraThinMaterial)
-						.frame(width: 50, height: 6)
-						.padding(.top)
-				}
-			}
-			.cornerRadius(24)
-			.ignoresSafeArea(.container, edges: .bottom)
-			.frame(height: previewHeight, alignment: .bottom)
-			.gesture(drag)
+			stylingSection
+			
+			notificationsSection
 		}
 		.navigationBarTitleDisplayMode(.inline)
 		.toolbarRole(.navigationStack)
@@ -45,8 +26,10 @@ struct AddItemView: View {
 		.toolbar {
 			ToolbarItem {
 				Button {
-					viewModel.save()
-					dismiss()
+					Task {
+						await viewModel.save()
+						dismiss()
+					}
 				} label: {
 					Text("Save")
 				}
@@ -86,9 +69,7 @@ struct AddItemView: View {
 					DatePicker("", selection: $viewModel.date, displayedComponents: .hourAndMinute)
 				}
 			}
-			.padding()
-			.background(Material.ultraThick)
-			.cornerRadius(16)
+			.materialContainer()
 		}
 		.padding()
 	}
@@ -108,9 +89,9 @@ struct AddItemView: View {
 					Spacer()
 					
 					NavigationLink {
-						ItemTypeSelectionView()
+						ItemTypeSelectionView(selection: $viewModel.type)
 					} label: {
-						Text("Rome")
+						Text(viewModel.type.title)
 					}
 					.padding(.vertical, 6)
 					.padding(.horizontal, 12)
@@ -132,9 +113,7 @@ struct AddItemView: View {
 					ColorPicker("", selection: $viewModel.backgroundColor)
 				}
 			}
-			.padding()
-			.background(Material.ultraThick)
-			.cornerRadius(16)
+			.materialContainer()
 		}
 		.padding()
 	}
@@ -156,25 +135,21 @@ struct AddItemView: View {
 					Toggle("", isOn: $viewModel.isNotificationEnabled)
 				}
 			}
-			.padding()
-			.background(Material.ultraThick)
-			.cornerRadius(16)
+			.materialContainer()
 		}
 		.padding()
-	}
-	
-	var drag: some Gesture {
-		DragGesture()
-			.onChanged { value in
-				previewHeight = max(100, previewHeight + value.translation.height)
-			}
 	}
 }
 
 struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
-		NavigationStack {
+		Group {
 			AddItemView()
+				.previewDisplayName("Without NavigationView")
+			
+			NavigationView {
+				AddItemView()
+			}.previewDisplayName("With NavigationView")
 		}
     }
 }
