@@ -16,6 +16,8 @@ struct SettingsView: View {
     var body: some View {
 		ScrollView {
 			notificationsSection
+			
+			localStorageSection
 		}
 		.navigationBarTitleDisplayMode(.inline)
 		.toolbarRole(.navigationStack)
@@ -42,6 +44,7 @@ struct SettingsView: View {
 			VStack(spacing: 12) {
 				HStack {
 					Text("Status")
+						.fontWeight(.medium)
 					
 					Spacer()
 					
@@ -70,6 +73,45 @@ struct SettingsView: View {
 						Label("Open Settings", systemImage: "bell.badge.fill")
 					}
 				}
+			}
+			.materialContainer()
+		}
+		.padding()
+	}
+	
+	var localStorageSection: some View {
+		VStack(alignment: .leading) {
+			
+			Text("Data")
+				.fontWeight(.semibold)
+				.padding(.leading)
+			
+			VStack(spacing: 12) {
+				
+				HStack {
+					Text("iCloud")
+						.fontWeight(.medium)
+
+					Spacer()
+
+					Toggle("", isOn: .constant(false))
+
+				}
+				
+				Button("Clear All Data") {
+					viewModel.showDataDeletionWarning.toggle()
+				}
+				.tint(.red)
+				.alert("Clear Data", isPresented: $viewModel.showDataDeletionWarning, actions: {
+					Button("Cancel", role: .cancel) {}
+					Button("Delete", role: .destructive) {
+						Task {
+							await viewModel.clearAllData()
+						}
+					}
+				}, message: {
+					Text("Are you sure you want to clear all data? This action is irreversible and will delete all data for this app on this device and in iCloud.")
+				})
 			}
 			.materialContainer()
 		}

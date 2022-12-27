@@ -10,8 +10,6 @@ import UserNotifications
 
 class LocalNotifications: NSObject, ObservableObject {
 	
-	@Published private(set) var authorizationStatus: UNAuthorizationStatus?
-	
 	let notificationCenter = UNUserNotificationCenter.current()
 	
 	// MARK: - Init

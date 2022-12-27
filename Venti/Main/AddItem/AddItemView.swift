@@ -133,7 +133,7 @@ struct AddItemView: View {
 					Spacer()
 					
 					Toggle("", isOn: $viewModel.isNotificationEnabled)
-				}
+				}.disabled(!viewModel.isNotificationEnabled)
 			}
 			.materialContainer()
 		}

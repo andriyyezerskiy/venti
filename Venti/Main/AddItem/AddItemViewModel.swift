@@ -18,6 +18,7 @@ class AddItemViewModel: ObservableObject {
 	@Published var isNotificationEnabled: Bool = false
 	
 	let itemStorage: ItemStorage = .shared
+	let localNotifications: LocalNotifications = .shared
 	
 	// MARK: - Computed Properties
 	var item: Item {
@@ -35,5 +36,10 @@ class AddItemViewModel: ObservableObject {
 		}
 		
 		await itemStorage.add(item: item)
+	}
+	
+	func isNotificationEnabled() async -> Bool {
+		let status = await localNotifications.notificationsAuthorizationStatus()
+		return status != UNAuthorizationStatus.denied
 	}
 }

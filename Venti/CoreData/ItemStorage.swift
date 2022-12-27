@@ -62,6 +62,18 @@ final class ItemStorage: ObservableObject {
 		await syncChanges()
 	}
 	
+	func deleteAll() async {
+		let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "PersistentItem")
+		let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+		
+		do {
+			try persistence.persistentContainer.viewContext.execute(deleteRequest)
+			await syncChanges()
+		} catch {
+			print(error)
+		}
+	}
+	
 	// MARK: - Helpers
 	private func syncChanges() async {
 		persistence.saveContext()

@@ -15,9 +15,12 @@ final class SettingsViewModel: ObservableObject {
 	@Published var authorizationStatus: UNAuthorizationStatus = .notDetermined
 	@Published var isLoadingAuthorizationStatus: Bool = false
 	
+	@Published var showDataDeletionWarning: Bool = false
+	
 	var isPreview: Bool = false
 	
-	var localNotifications: LocalNotifications = .shared
+	let itemStorage: ItemStorage = .shared
+	let localNotifications: LocalNotifications = .shared
 	
 	// MARK: - Init
 	init() {
@@ -37,11 +40,12 @@ final class SettingsViewModel: ObservableObject {
 	}
 	
 	var showOpenSettings: Bool {
-		if authorizationStatus.showOpenSettings, !isLoadingAuthorizationStatus {
-			return true
-		} else {
-			return false
-		}
+		authorizationStatus.showOpenSettings && !isLoadingAuthorizationStatus
+	}
+	
+	// MARK: - Actions
+	func clearAllData() async {
+		await itemStorage.deleteAll()
 	}
 	
 	// MARK: - Helpers

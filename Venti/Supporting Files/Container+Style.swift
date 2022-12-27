@@ -10,6 +10,7 @@ import SwiftUI
 struct Container: ViewModifier {
 	func body(content: Content) -> some View {
 		content
+			.frame(maxWidth: .infinity)
 			.padding()
 			.background(Material.ultraThick)
 			.cornerRadius(16)
